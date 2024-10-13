@@ -86,10 +86,8 @@ select:focus {
     text-align: center;
 }
 
-
-
 /* Error al traer los repos */
-.result-container-error {
+.error {
     border: 1px solid var(--red);
     color: var(--red);
 }
