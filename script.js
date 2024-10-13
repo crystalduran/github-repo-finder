@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Asigna los datos del JSON a los elementos HTML
         repoName.textContent = repo.name;
-        repoDescription.textContent = truncateDescription(repo.description, 80);
+        repoDescription.textContent = truncateDescription(repo.description, 100);
         repoLink.href = repo.html_url;
         repoLanguage.textContent = repo.language;
         repoStars.textContent = repo.stargazers_count || 0;

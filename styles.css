@@ -148,6 +148,7 @@ button {
     grid-row: 2; 
     font-size: 14px;
     color: rgb(0, 0, 0, 0.6);
+    line-height: 20px;
 }
 
 .repo-language {
