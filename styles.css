@@ -1,0 +1,182 @@
+:root {
+    --raisin-black: #2D2D34;
+    --snow-pink: #FFF8FA; 
+    --snow: #FFFCFD;
+    --red: #C90000;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--snow-pink);
+}
+
+main {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 382px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+}
+
+h1 {
+    color: var(--raisin-black);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.search-container {
+    width: 100%;
+    position: relative;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; 
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--snow);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; 
+    color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    color: black;
+}
+
+select:focus {
+    border-color: black;
+}
+
+.result-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--snow);
+    height: 182px;  
+    align-content: center;
+    text-align: center;
+}
+
+
+
+/* Error al traer los repos */
+.result-container-error {
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+button {
+    width: 100%;
+    background-color: var(--red);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Respuesta */
+
+.repo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 15px;
+    text-align: start;
+}
+
+.repo-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 5px;
+    column-gap: 7px;
+    font-size: 13px;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.repo-name {
+    grid-column: 1 / 3; 
+    grid-row: 1; 
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.arrow {
+    grid-column: 4; 
+    grid-row: 1; 
+    text-align: end;
+}
+
+.repo-description {
+    grid-column: 1 / -1; 
+    grid-row: 2; 
+    font-size: 14px;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.repo-language {
+    grid-column: 1; 
+    grid-row: 3;
+    
+}
+
+.repo-stars {
+    grid-column: 2; 
+    grid-row: 3;
+}
+
+.repo-forks {
+    grid-column: 3; 
+    grid-row: 3; 
+}
+
+.repo-issues {
+    grid-column: 4; 
+    grid-row: 3; 
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
